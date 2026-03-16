@@ -1,4 +1,4 @@
-# react-native-nitro-webbrowser
+# @abeman/react-native-nitro-webbrowser
 
 In-app browser for React Native, powered by [Nitro Modules](https://nitro.margelo.com/).
 
@@ -8,7 +8,7 @@ In-app browser for React Native, powered by [Nitro Modules](https://nitro.margel
 ## Installation
 
 ```sh
-npm install react-native-nitro-webbrowser react-native-nitro-modules
+npm install @abeman/react-native-nitro-webbrowser react-native-nitro-modules
 ```
 
 > `react-native-nitro-modules` is a required peer dependency.
@@ -28,7 +28,7 @@ No additional setup required.
 ### Open a URL in the in-app browser
 
 ```tsx
-import InAppBrowser from 'react-native-nitro-webbrowser';
+import InAppBrowser from '@abeman/react-native-nitro-webbrowser';
 
 const result = await InAppBrowser.open('https://example.com', {
   // iOS
@@ -57,7 +57,7 @@ const result = await InAppBrowser.open('https://example.com', {
 ### Authentication (OAuth)
 
 ```tsx
-import InAppBrowser from 'react-native-nitro-webbrowser';
+import InAppBrowser from '@abeman/react-native-nitro-webbrowser';
 
 const result = await InAppBrowser.openAuth(
   'https://auth.example.com/authorize?client_id=xxx&redirect_uri=myapp://callback',

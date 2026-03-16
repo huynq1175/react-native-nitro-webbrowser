@@ -1,5 +1,5 @@
 {
-  "name": "react-native-nitro-webbrowser",
+  "name": "@abeman/react-native-nitro-webbrowser",
   "version": "0.1.0",
   "description": "InAppBrowser for React Native",
   "main": "./lib/module/index.js",

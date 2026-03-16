@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-nitro-webbrowser": ["./src/index"]
+      "@abeman/react-native-nitro-webbrowser": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

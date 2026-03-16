@@ -11,7 +11,7 @@ import {
   DismissButtonStyle,
   InAppBrowser,
   ModalPresentationStyle,
-} from 'react-native-nitro-webbrowser';
+} from '@abeman/react-native-nitro-webbrowser';
 
 export default function App() {
   const [result, setResult] = useState<string>('');
