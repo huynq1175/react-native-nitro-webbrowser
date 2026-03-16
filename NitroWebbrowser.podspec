@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
     "cpp/**/*.{hpp,cpp}",
   ]
 
+  s.frameworks   = 'SafariServices', 'AuthenticationServices'
+
   s.dependency 'React-jsi'
   s.dependency 'React-callinvoker'
 

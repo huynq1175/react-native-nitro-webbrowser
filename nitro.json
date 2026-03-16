@@ -9,8 +9,14 @@
   },
   "autolinking": {
     "NitroWebbrowser": {
-      "swift": "NitroWebbrowser",
-      "kotlin": "NitroWebbrowser"
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "NitroWebbrowser"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "NitroWebbrowser"
+      }
     }
   },
   "ignorePaths": ["node_modules"]
