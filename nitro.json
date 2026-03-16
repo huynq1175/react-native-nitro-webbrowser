@@ -1,0 +1,17 @@
+{
+  "cxxNamespace": ["nitrowebbrowser"],
+  "ios": {
+    "iosModuleName": "NitroWebbrowser"
+  },
+  "android": {
+    "androidNamespace": ["nitrowebbrowser"],
+    "androidCxxLibName": "nitrowebbrowser"
+  },
+  "autolinking": {
+    "NitroWebbrowser": {
+      "swift": "NitroWebbrowser",
+      "kotlin": "NitroWebbrowser"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
