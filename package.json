@@ -1,6 +1,6 @@
 {
   "name": "@abeman/react-native-nitro-webbrowser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "InAppBrowser for React Native",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
