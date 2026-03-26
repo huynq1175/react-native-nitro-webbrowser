@@ -80,7 +80,6 @@ export default function App() {
           toolbarColor: '#453AA4',
           // Android: show as bottom sheet (Partial Custom Tabs)
           bottomSheet: true,
-          bottomSheetHeightRatio: 0.9,
         }
       );
       setResult(JSON.stringify(res, null, 2));
@@ -128,6 +127,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: 'white',
   },
   title: {
     fontSize: 24,

@@ -262,11 +262,14 @@ class NitroWebbrowser : HybridNitroWebbrowserSpec() {
               parseAndSetColor(builder, options.navigationBarColor, "setNavigationBarColor")
               parseAndSetColor(builder, options.navigationBarDividerColor, "setNavigationBarDividerColor")
 
-              // Calculate bottom sheet height
+              // Calculate bottom sheet height: full screen minus status bar
               val displayMetrics = activity.resources.displayMetrics
               val screenHeightPx = displayMetrics.heightPixels
-              val ratio = options.bottomSheetHeightRatio ?: 0.7
-              val heightPx = (screenHeightPx * ratio).toInt()
+              val statusBarHeightPx = activity.resources.getDimensionPixelSize(
+                activity.resources.getIdentifier("status_bar_height", "dimen", "android")
+              )
+
+              val heightPx = screenHeightPx - statusBarHeightPx
               builder.setInitialActivityHeightPx(heightPx, CustomTabsIntent.ACTIVITY_HEIGHT_ADJUSTABLE)
 
               // Disable share and minimize toolbar clutter for auth flow
@@ -289,6 +292,10 @@ class NitroWebbrowser : HybridNitroWebbrowserSpec() {
                 } catch (_: Exception) {
                 }
               }
+
+              // Fade in/out animation for bottom sheet
+//              builder.setStartAnimations(activity, R.anim.fade_in, R.anim.no_anim)
+//              builder.setExitAnimations(activity, R.anim.no_anim, R.anim.fade_out)
 
               val customTabsIntent = builder.build()
               val intent = customTabsIntent.intent
@@ -324,8 +331,7 @@ class NitroWebbrowser : HybridNitroWebbrowserSpec() {
               }
 
               activity.startActivity(
-                ChromeTabsManagerActivity.createStartIntent(activity, intent),
-                customTabsIntent.startAnimationBundle
+                ChromeTabsManagerActivity.createStartIntent(activity, intent, customTabsIntent.startAnimationBundle)
               )
 
               // Unbind service after launching to avoid leak

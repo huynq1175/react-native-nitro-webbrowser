@@ -70,7 +70,6 @@ export interface InAppBrowserOptions {
 
   // Android bottom sheet options (Partial Custom Tabs)
   bottomSheet?: boolean;
-  bottomSheetHeightRatio?: number;
 }
 
 export interface BrowserResult {
